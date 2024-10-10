@@ -1,15 +1,140 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html, body {
- height: 100%
+  height: 100%;
 }
+
 h1, h2, h3, h4, h5, h6, p {
- margin-bottom: 16px
+  margin-bottom: 16px;
+}
+
+button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  font-style: italic;
+  width: 200px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+  background-color: orange;
 }
 
 #app {
-  background-color: tan;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .mainContainer {
+    width: 80%;
+    height: 100%;
+
+    .hero {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      align-items: end;
+
+      .heroTitle {
+        width: fit-content;
+        height: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 45pt;
+      }
+    }
+
+    #navBar {
+      width: 100%;
+      height: 7%;
+      display: flex;
+      justify-content: space-between;
+
+      .uniName {
+        width: 400px;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+
+        #logo {
+          width: 50px;
+          height: 50px;
+        }
+
+        .uniTitle{
+          width: fit-content;
+          height: 50px;
+          padding: 0 5px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-style: italic;
+          font-weight: bolder;
+          font-size: 16pt;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .links {
+        width: fit-content;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          padding: 0 50px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 14pt;
+          font-style: italic;
+          text-decoration: none;
+          text-transform: capitalize;
+          color: black;
+        }
+      }
+
+    }
+
+    .inputContainer {
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .userInput {
+        width: 45%;
+        height: 80%;
+
+        .textFields {
+          height: fit-content;
+          margin-bottom: 10px;
+          font-size: 14pt;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+
+          input {
+            padding: 5px 200px;
+            display: block;
+          }
+
+          .submitStudentInfo {
+            margin-top: 10px;
+            align-self: center;
+          }
+        }
+      }
+
+      .displayStudents {
+        width: 45%;
+        height: 80%;
+      }
+    }
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
