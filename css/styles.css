@@ -96,7 +96,6 @@ button {
   height: 60%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 #app .mainContainer .inputContainer .userInput {
   width: 45%;
@@ -109,10 +108,13 @@ button {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 #app .mainContainer .inputContainer .userInput .textFields input {
-  padding: 5px 200px;
+  width: 35vw;
+  height: 3vh;
   display: block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12pt;
 }
-#app .mainContainer .inputContainer .userInput .textFields .submitStudentInfo {
+#app .mainContainer .inputContainer .userInput .textFields #submitStudentInfo {
   margin-top: 10px;
   align-self: center;
 }
