@@ -38,6 +38,10 @@ button {
   height: 30%;
   display: flex;
   align-items: end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(255, 255, 255)), url(/images/jupiterUniHero.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
 }
 #app .mainContainer .hero .heroTitle {
   width: fit-content;
@@ -118,9 +122,34 @@ button {
   margin-top: 10px;
   align-self: center;
 }
-#app .mainContainer .inputContainer .displayStudents {
+#app .mainContainer .inputContainer .studentContainer {
   width: 45%;
-  height: 80%;
+  height: 70%;
+}
+#app .mainContainer .inputContainer .studentContainer #userList {
+  min-height: 90%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16pt;
+}
+#app .mainContainer .inputContainer .studentContainer #userList #userName {
+  margin-bottom: 30px;
+}
+#app .mainContainer .inputContainer .studentContainer #userList #userDoB {
+  margin-bottom: 30px;
+}
+#app .mainContainer .inputContainer .studentContainer #userList #userEmail {
+  margin-bottom: 30px;
+}
+#app .mainContainer .inputContainer .studentContainer #userList #userPhone {
+  margin-bottom: 30px;
+}
+#app .mainContainer .inputContainer .studentContainer #userList #userClasses {
+  margin-bottom: 30px;
+}
+#app .mainContainer .inputContainer .studentContainer .buttonCenter {
+  width: 100%;
+  height: 10%;
+  display: flex;
 }
 
 

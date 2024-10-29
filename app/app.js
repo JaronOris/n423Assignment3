@@ -1,3 +1,5 @@
+// const { fn } = require ("jquery");
+
 function initListeners() {
   $("#submitStudentInfo").on("click", (e) => {
     e.preventDefault();
@@ -31,8 +33,6 @@ function initListeners() {
 
     userObj.classes = finalClassArray;
 
-    console.log(userObj)
-
     $("#fname").val("");
     $("#lname").val("");
     $("#DoB").val("");
@@ -42,6 +42,10 @@ function initListeners() {
 
     addUser(userObj);
   });
+
+  $("#getUsers").on("click", (e) => {
+    getAllUsers();
+  })
 }
 
 function addUser(user) {
@@ -51,9 +55,23 @@ function addUser(user) {
   localStorage.setItem("Classes", JSON.stringify(allUsers));
 }
 
+function getAllUsers() {
+  let allUsers = JSON.parse(localStorage.getItem("Classes"));
+  $.each(allUsers, (idx, user) => {
+    $("#userName").html(`Name: ${user.fname} ${user.lname}`)
+    $("#userDoB").html(`Date of Birth: ${user.DoB}`)
+    $("#userEmail").html(`Email: ${user.email}`)
+    $("#userPhone").html(`Phone: ${user.phone}`)
+    $("#userClasses").html(" ")
+    $("#userClasses").html("Classes:")
+      $.each(user.classes, (idx, cls) => {
+        $("#userClasses").append(`<span>${cls.className}, </span>`);
+      });
+  });
+}
+
 function connectToStorage() {
   if(localStorage) {
-    console.log("Yes storage");
     let classes = localStorage.getItem("Classes");
 
     if(classes){
